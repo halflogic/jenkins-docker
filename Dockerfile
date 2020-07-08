@@ -1,6 +1,7 @@
 FROM jenkins/jenkins:lts
-MAINTAINER 4oh4
+MAINTAINER halflogic
 
+# Forked from https://github.com/4OH4/jenkins-docker
 # Derived from https://github.com/getintodevops/jenkins-withdocker (miiro@getintodevops.com)
 
 USER root
@@ -8,7 +9,7 @@ USER root
 # Install the latest Docker CE binaries and add user `jenkins` to the docker group
 RUN apt-get update && \
     apt-get -y --no-install-recommends install apt-transport-https \
-      ca-certificates \
+      ca-certificates sshpass \
       curl \
       gnupg2 \
       software-properties-common && \
