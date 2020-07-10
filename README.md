@@ -22,7 +22,7 @@ The easiest way is to pull from Docker Hub:
 	    -v jenkins_home:/var/jenkins_home \
 	    -v /var/run/docker.sock:/var/run/docker.sock \
 	    --restart unless-stopped \
-	    4oh4/jenkins-docker
+	    halflogic/jenkins-docker
 
 Alternatively, you can clone this repository, build the image from the Dockerfile, and then run the container
 
